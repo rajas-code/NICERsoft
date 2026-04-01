@@ -17,11 +17,19 @@ understanding what it is doing.
 
 See the Wiki for some documentation: https://github.com/paulray/NICERsoft/wiki
 
-## Usage
+## Installation
 
-To use these scripts add `<basedir>/NICERsoft/scripts` to your PATH
-and add `<basedir>/NICERsoft` to your PYTHONPATH, where ``<basedir>`` is wherever you
-cloned NICERsoft.
+Install the package using pip (recommended):
+
+```bash
+cd NICERsoft
+pip install -e .
+```
+
+This will install all dependencies and make the scripts available in your PATH.
+
+Alternatively, you can use the legacy method by adding `<basedir>/NICERsoft/scripts` to your PATH
+and `<basedir>/NICERsoft` to your PYTHONPATH, where `<basedir>` is wherever you cloned NICERsoft.
 
 ## NOTES:
 

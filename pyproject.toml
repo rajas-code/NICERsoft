@@ -1,0 +1,56 @@
+[build-system]
+requires = ["setuptools>=61.0", "wheel"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "nicersoft"
+version = "0.1.0"
+description = "User-contributed analysis tools for the NICER mission"
+readme = "README.md"
+requires-python = ">=3.8"
+license = {text = "MIT"}
+authors = [
+    {name = "Paul Ray", email = "paul.ray@nrl.navy.mil"},
+]
+keywords = ["astronomy", "NICER", "X-ray", "pulsar", "timing"]
+classifiers = [
+    "Development Status :: 4 - Beta",
+    "Intended Audience :: Science/Research",
+    "License :: OSI Approved :: MIT License",
+    "Programming Language :: Python :: 3",
+    "Programming Language :: Python :: 3.8",
+    "Programming Language :: Python :: 3.9",
+    "Programming Language :: Python :: 3.10",
+    "Programming Language :: Python :: 3.11",
+    "Programming Language :: Python :: 3.12",
+    "Topic :: Scientific/Engineering :: Astronomy",
+]
+
+dependencies = [
+    "numpy",
+    "matplotlib",
+    "scipy",
+    "astropy",
+    "pint-pulsar",
+    "loguru",
+    "tqdm",
+]
+
+[project.optional-dependencies]
+dev = [
+    "pytest",
+    "pytest-cov",
+]
+
+[project.urls]
+Homepage = "https://github.com/paulray/NICERsoft"
+Documentation = "https://github.com/paulray/NICERsoft/wiki"
+Repository = "https://github.com/paulray/NICERsoft"
+Issues = "https://github.com/paulray/NICERsoft/issues"
+
+[tool.setuptools]
+packages = ["nicer", "scripts"]
+include-package-data = true
+
+[tool.setuptools.package-data]
+"*" = ["data/**/*"]
