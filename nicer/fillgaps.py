@@ -180,7 +180,7 @@ def filter_all(data):
         # build filtered data with gaps
         filteredrun = np.array([])
         if gap_locs[0] == 0:  # if the first space is a gap, append and remove
-            filteredrun = np.append(filteredrun, np.full(gap_lengths[0], np.NaN))
+            filteredrun = np.append(filteredrun, np.full(gap_lengths[0], np.nan))
             gap_locs = np.delete(gap_locs, 0)
             gap_lengths = np.delete(gap_lengths, 0)
         log.info(f"len(filtereddatablocks) = {len(filtereddatablocks)}")
@@ -188,7 +188,7 @@ def filter_all(data):
         for i in range(len(filtereddatablocks)):
             filteredrun = np.append(filteredrun, filtereddatablocks[i])
             if i < np.size(gap_locs):
-                filteredrun = np.append(filteredrun, np.full(gap_lengths[i], np.NaN))
+                filteredrun = np.append(filteredrun, np.full(gap_lengths[i], np.nan))
     else:  # if no gaps
         filteredrun = filterfunction(data)
     return filteredrun
